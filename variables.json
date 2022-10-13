@@ -1,6 +1,6 @@
 {
   "aws_region": "us-east-1",
-  "company_name": "good-company",
+  "company_name": "hugging-face",
   "parallel_cluster_version": "3.1.4",
   "instance_type": "g4dn.12xlarge",
   "encrypt_boot": "false",
@@ -10,7 +10,7 @@
   "efa_version": "latest",
   "intel_mkl_version": "intel-mkl-2020.0-088",
   "nvidia_driver_version": "510.47.03",
-  "cuda_version": "11-6",
+  "cuda_version": "11-5",
   "cudnn_version": "libcudnn8",
   "pyxis_version": "v0.12.0",
   "nccl_version": "v2.12.10-1"
