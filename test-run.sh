@@ -33,6 +33,8 @@ cd $six_ALL_CCFRWORK/code/tr11-176B-ml/DeepSpeed
 cd $six_ALL_CCFRWORK/code/tr11-176B-ml/Megatron-DeepSpeed
 pip install -r requirements.txt
 
+cd $six_ALL_CCFRWORK/code/tr11-176B-ml
+git clone https://github.com/NVIDIA/apex
 cd $six_ALL_CCFRWORK/code/tr11-176B-ml/apex
 ./build.sh
 
