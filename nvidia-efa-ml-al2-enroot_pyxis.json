@@ -302,6 +302,7 @@
         "export six_ALL_CCFRWORK=/gpfsssd/worksf/projects/rech/six/commun",
         "eval \"$(/gpfsssd/worksf/projects/rech/six/commun/conda/bin/conda shell.bash hook)\"",
         "cd /home/ec2-user/",
+        "echo \"eval \\\"\\$(/gpfsssd/worksf/projects/rech/six/commun/conda/bin/conda shell.bash hook)\\\"\" >> .bashrc",
         "export CONDA_ENVS_PATH=$six_ALL_CCFRWORK/conda",
         "conda create -y -n tr11-176B-ml python=3.8",
         "conda activate tr11-176B-ml",
