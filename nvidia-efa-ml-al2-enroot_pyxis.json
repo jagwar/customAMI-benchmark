@@ -169,8 +169,9 @@
         "sudo rsync -al /tmp/fabricmanager-linux-x86_64-{{user `nvidia_driver_version`}}-archive/ /usr/ --exclude LICENSE",
         "sudo mv /usr/systemd/nvidia-fabricmanager.service /usr/lib/systemd/system",
         "sudo systemctl enable nvidia-fabricmanager",
-        "sudo yum -y install cuda-toolkit-{{user `cuda_version`}} {{user `cudnn_version`}} {{user `cudnn_version`}}-devel",
+        "echo 'options nvidia NVreg_EnableGpuFirmware=0' | sudo tee /etc/modprobe.d/nvidia-gsp.conf",
         "echo -e '#!/bin/sh\nexport LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64\nexport PATH=$PATH:/usr/local/cuda/bin' | sudo tee /etc/profile.d/cuda.sh",
+        "echo -e '#!/bin/bash\nnvidia-smi -pm 1' | sudo tee /etc/rc.local",
         "sudo chmod +x /etc/rc.local"
       ]
     },
@@ -300,6 +301,7 @@
         "sudo chown -R ec2-user /gpfsssd",
         "export six_ALL_CCFRWORK=/gpfsssd/worksf/projects/rech/six/commun",
         "eval \"$(/gpfsssd/worksf/projects/rech/six/commun/conda/bin/conda shell.bash hook)\"",
+        "cd /home/ec2-user/",
         "export CONDA_ENVS_PATH=$six_ALL_CCFRWORK/conda",
         "conda create -y -n tr11-176B-ml python=3.8",
         "conda activate tr11-176B-ml",
