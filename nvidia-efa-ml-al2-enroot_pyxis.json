@@ -307,7 +307,14 @@
         "conda create -y -n tr11-176B-ml python=3.8",
         "conda activate tr11-176B-ml",
         "pip install transformers",
-        "pip install --pre torch torchvision torchaudio -f https://download.pytorch.org/whl/test/cu115/torch_test.html -U"
+        "conda install pytorch==1.12.0 torchvision==0.13.0 torchaudio==0.12.0 cudatoolkit=11.6 -c pytorch -c conda-forge",
+        "mkdir -p $six_ALL_CCFRWORK/code",
+        "pip install deepspeed",
+        "git clone https://github.com/bigscience-workshop/Megatron-DeepSpeed",
+        "cd Megatron-DeepSpeed",
+        "pip install -r requirements.txt",
+
+        "git clone https://github.com/huggingface/tokenizers"
       ]
     }
   ]
