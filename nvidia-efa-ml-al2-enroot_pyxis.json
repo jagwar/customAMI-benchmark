@@ -296,12 +296,15 @@
       "inline": [
         "cd /opt",
         "sudo wget https://repo.anaconda.com/miniconda/Miniconda3-py38_4.12.0-Linux-x86_64.sh",
-        "sudo bash Miniconda3-py38_4.12.0-Linux-x86_64.sh -b -p /gpfsssd/worksf/projects/rech/six/commun/conda/tr11-176B-ml/",
+        "sudo bash Miniconda3-py38_4.12.0-Linux-x86_64.sh -b -p /gpfsssd/worksf/projects/rech/six/commun/conda/",
         "sudo chown -R ec2-user /gpfsssd",
-        "eval \"$(/gpfsssd/worksf/projects/rech/six/commun/conda/tr11-176B-ml/bin/conda shell.bash hook)\"",
-        "conda env create -f bloom.yml",
-        "conda update -n base -c defaults conda",
-        "sudo git clone https://github.com/bigscience-workshop/bigscience.git"
+        "export six_ALL_CCFRWORK=/gpfsssd/worksf/projects/rech/six/commun",
+        "eval \"$(/gpfsssd/worksf/projects/rech/six/commun/conda/bin/conda shell.bash hook)\"",
+        "export CONDA_ENVS_PATH=$six_ALL_CCFRWORK/conda",
+        "conda create -y -n tr11-176B-ml python=3.8",
+        "conda activate tr11-176B-ml",
+        "pip install transformers",
+        "pip install --pre torch torchvision torchaudio -f https://download.pytorch.org/whl/test/cu115/torch_test.html -U"
       ]
     }
   ]
