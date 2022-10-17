@@ -1,7 +1,7 @@
 {
   "aws_region": "us-east-1",
   "company_name": "hugging-face",
-  "parallel_cluster_version": "3.1.4",
+  "parallel_cluster_version": "3.2.1",
   "instance_type": "g4dn.12xlarge",
   "encrypt_boot": "false",
   "public_ip": "true",
