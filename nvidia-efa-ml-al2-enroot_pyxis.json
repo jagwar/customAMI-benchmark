@@ -310,11 +310,12 @@
         "pip install transformers",
         "mkdir -p $six_ALL_CCFRWORK/code/tr11-176B-ml",
         "pip install deepspeed",
-        "git clone https://github.com/bigscience-workshop/Megatron-DeepSpeed $six_ALL_CCFRWORK/code",
+        "git clone https://github.com/bigscience-workshop/Megatron-DeepSpeed $six_ALL_CCFRWORK/code/Megatron-DeepSpeed",
         "cd $six_ALL_CCFRWORK/code/Megatron-DeepSpeed",
         "pip install -r requirements.txt",
-        "git clone https://github.com/NVIDIA/apex.git $six_ALL_CCFRWORK/code",
-        "git clone https://github.com/bigscience-workshop/bigscience.git $six_ALL_CCFRWORK/code/tr11-176B-ml"
+        "git clone https://github.com/NVIDIA/apex.git $six_ALL_CCFRWORK/code/apex",
+        "git clone https://github.com/bigscience-workshop/bigscience.git $six_ALL_CCFRWORK/code/tr11-176B-ml/bigscience",
+        "sed -z 's/if (bare_metal_version != torch_binary_version):\\n        raise RuntimeError(/if (bare_metal_version != torch_binary_version):\\n        return\\n    raise RuntimeError(/g' $six_ALL_CCFRWORK/code/apex/setup.py > $six_ALL_CCFRWORK/code/apex/setup.py"
       ]
     }
   ]
