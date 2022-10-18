@@ -315,7 +315,9 @@
         "pip install -r requirements.txt",
         "git clone https://github.com/NVIDIA/apex.git $six_ALL_CCFRWORK/code/apex",
         "git clone https://github.com/bigscience-workshop/bigscience.git $six_ALL_CCFRWORK/code/tr11-176B-ml/bigscience",
-        "sed -z 's/if (bare_metal_version != torch_binary_version):\\n        raise RuntimeError(/if (bare_metal_version != torch_binary_version):\\n        return\\n    raise RuntimeError(/g' $six_ALL_CCFRWORK/code/apex/setup.py > $six_ALL_CCFRWORK/code/apex/setup.py"
+        "sed -zi 's/if (bare_metal_version != torch_binary_version):\\n        raise RuntimeError(/if (bare_metal_version != torch_binary_version):\\n        return\\n    raise RuntimeError(/g' $six_ALL_CCFRWORK/code/apex/setup.py",
+        "cd $six_ALL_CCFRWORK/code/apex",
+        "pip install --global-option=\"--cpp_ext\" --global-option=\"--cuda_ext\" --no-cache -v --disable-pip-version-check .  2>&1 | tee build.log"
       ]
     }
   ]
