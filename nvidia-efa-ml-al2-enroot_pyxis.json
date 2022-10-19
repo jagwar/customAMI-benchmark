@@ -297,27 +297,15 @@
       "inline": [
         "cd /opt",
         "sudo wget https://repo.anaconda.com/miniconda/Miniconda3-py38_4.12.0-Linux-x86_64.sh",
-        "sudo bash Miniconda3-py38_4.12.0-Linux-x86_64.sh -b -p /gpfsssd/worksf/projects/rech/six/commun/conda/",
-        "sudo chown -R ec2-user /gpfsssd",
-        "export six_ALL_CCFRWORK=/gpfsssd/worksf/projects/rech/six/commun",
-        "eval \"$(/gpfsssd/worksf/projects/rech/six/commun/conda/bin/conda shell.bash hook)\"",
+        "sudo bash Miniconda3-py38_4.12.0-Linux-x86_64.sh -b -p /home/ec2-user/conda",
+        "eval \"$(/home/ec2-user/conda shell.bash hook)\"",
         "cd /home/ec2-user/",
-        "echo \". /gpfsssd/worksf/projects/rech/six/commun/conda/etc/profile.d/conda.sh\" >> ~/.bashrc",
-        "export CONDA_ENVS_PATH=$six_ALL_CCFRWORK/conda",
-        "conda create -y -n tr11-176B-ml python=3.8",
-        "conda activate tr11-176B-ml",
-        "conda install pytorch==1.12.0 torchvision==0.13.0 torchaudio==0.12.0 cudatoolkit=11.6 -c pytorch -c conda-forge",
-        "pip install transformers",
-        "mkdir -p $six_ALL_CCFRWORK/code/tr11-176B-ml",
-        "pip install deepspeed",
-        "git clone https://github.com/bigscience-workshop/Megatron-DeepSpeed $six_ALL_CCFRWORK/code/Megatron-DeepSpeed",
-        "cd $six_ALL_CCFRWORK/code/Megatron-DeepSpeed",
-        "pip install -r requirements.txt",
-        "git clone https://github.com/NVIDIA/apex.git $six_ALL_CCFRWORK/code/apex",
-        "git clone https://github.com/bigscience-workshop/bigscience.git $six_ALL_CCFRWORK/code/tr11-176B-ml/bigscience",
-        "sed -zi 's/if (bare_metal_version != torch_binary_version):\\n        raise RuntimeError(/if (bare_metal_version != torch_binary_version):\\n        return\\n    raise RuntimeError(/g' $six_ALL_CCFRWORK/code/apex/setup.py",
-        "cd $six_ALL_CCFRWORK/code/apex",
-        "pip install --global-option=\"--cpp_ext\" --global-option=\"--cuda_ext\" --no-cache -v --disable-pip-version-check .  2>&1 | tee build.log"
+        "echo \". /home/ec2-user/conda/etc/profile.d/conda.sh\" >> ~/.bashrc",
+        "export CONDA_ENVS_PATH=/home/ec2-user/conda",
+        "conda create -y -n preprocessing python=3.8",
+        "conda activate preprocessing",
+        "wget https://gist.githubusercontent.com/ola13/41dddfe031346fd49b5acb01cbb30f5e/raw/24b4734caf631c74d973e9a68be902200684214a/requirements.txt",
+        "pip install -r requirements.txt"
       ]
     }
   ]
