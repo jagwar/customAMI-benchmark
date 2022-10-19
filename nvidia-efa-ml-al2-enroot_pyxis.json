@@ -323,7 +323,8 @@
         "sed -zi 's/if (bare_metal_version != torch_binary_version):\\n        raise RuntimeError(/if (bare_metal_version != torch_binary_version):\\n        return\\n    raise RuntimeError(/g' $six_ALL_CCFRWORK/code/apex/setup.py",
         "cd $six_ALL_CCFRWORK/code/apex",
         "pip install --global-option=\"--cpp_ext\" --global-option=\"--cuda_ext\" --no-cache -v --disable-pip-version-check .  2>&1 | tee build.log",
-        "echo \"conda create --name tr11-176B-ml --clone /gpfsssd/worksf/projects/rech/six/commun/conda/tr11-176B-ml\" >> ~/.bashrc"
+        "conda deactivate",
+        "conda create --name tr11-176B-ml --clone /gpfsssd/worksf/projects/rech/six/commun/conda/tr11-176B-ml"
       ]
     }
   ]
