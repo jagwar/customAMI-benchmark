@@ -13,7 +13,7 @@ conda create -y -n tr11-176B-ml python=3.8
 conda activate tr11-176B-ml
 conda install pytorch==1.12.0 torchvision==0.13.0 torchaudio==0.12.0 cudatoolkit=11.6 -c pytorch -c conda-forge
 pip install transformers
-mkdir -p $six_ALL_CCFRWORK/code/tr11-176B-ml
+cd $six_ALL_CCFRWORK/code/tr11-176B-ml
 git clone https://github.com/huggingface/tokenizers.git
 cd tokenizers
 git checkout bigscience_fork
