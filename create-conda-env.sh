@@ -22,7 +22,7 @@ pip install setuptools_rust
 pip install -e .
 pip install git+https://github.com/microsoft/DeepSpeed@2a64448830375528009d2d8c81e8a40d7e09396d
 git clone https://github.com/bigscience-workshop/Megatron-DeepSpeed $six_ALL_CCFRWORK/code/tr11-176B-ml/Megatron-DeepSpeed
-cd $six_ALL_CCFRWORK/code/Megatron-DeepSpeed
+cd $six_ALL_CCFRWORK/code/tr11-176B-ml/Megatron-DeepSpeed
 git pull
 git checkout 9edd93934d0cb616b359d22ef4a3112336fea558
 pip install -r requirements.txt
