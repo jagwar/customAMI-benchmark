@@ -1,7 +1,7 @@
 #update c++ and g++
 sudo yum install centos-release-scl
-sudo yum install devtoolset-7-gcc*
-scl enable devtoolset-7 bash
+sudo yum install devtoolset-7
+source scl_source enable devtoolset-7
 sudo wget https://repo.anaconda.com/miniconda/Miniconda3-py38_4.12.0-Linux-x86_64.sh
 sudo bash Miniconda3-py38_4.12.0-Linux-x86_64.sh -b -p /gpfswork/rech/six/commun/conda/
 sudo chown -R ec2-user /gpfswork/rech/six/commun/conda/
