@@ -25,7 +25,7 @@ git checkout bigscience_fork
 cd bindings/python
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 source "$HOME/.cargo/env"
-yum install openssl-devel
+sudo yum install openssl-devel
 pip install setuptools_rust
 pip install -e .
 pip install git+https://github.com/microsoft/DeepSpeed@2a64448830375528009d2d8c81e8a40d7e09396d
