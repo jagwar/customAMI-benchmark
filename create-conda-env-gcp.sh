@@ -10,7 +10,7 @@ eval "$(/gpfswork/rech/six/commun/conda/bin/conda shell.bash hook)"
 cd /home/guillaume_huggingface_co/
 echo ". /gpfswork/rech/six/commun/conda/etc/profile.d/conda.sh" >> ~/.bashrc
 echo "export six_ALL_CCFRWORK=/gpfswork/rech/six/commun" >> ~/.bashrc
-echo "export six_ALL_CCFRSCRATCH=/scratch" >> ~/.bashrc
+echo "export six_ALL_CCFRSCRATCH=/gpfswork/scratch" >> ~/.bashrc
 echo ". /gpfswork/rech/six/commun/conda/etc/profile.d/conda.sh" >> ~/.bashrc
 export CONDA_ENVS_PATH=$six_ALL_CCFRWORK/conda
 conda create -y -n tr11-176B-ml python=3.8
