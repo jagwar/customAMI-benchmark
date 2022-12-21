@@ -1,5 +1,5 @@
 #update c++ and g++
-sudo yum install centos-release-scl
+sudo yum install -y centos-release-scl
 sudo yum install -y devtoolset-10
 source scl_source enable devtoolset-10
 sudo wget https://repo.anaconda.com/miniconda/Miniconda3-py38_4.12.0-Linux-x86_64.sh
