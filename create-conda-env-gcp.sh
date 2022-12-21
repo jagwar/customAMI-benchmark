@@ -4,10 +4,10 @@ sudo yum install -y devtoolset-10
 source scl_source enable devtoolset-10
 sudo wget https://repo.anaconda.com/miniconda/Miniconda3-py38_4.12.0-Linux-x86_64.sh
 sudo bash Miniconda3-py38_4.12.0-Linux-x86_64.sh -b -p /gpfswork/rech/six/commun/conda/
-sudo chown -R opc /gpfswork/rech/six/commun/conda/
+sudo chown -R guillaume_huggingface_co /gpfswork/rech/six/commun/conda/
 export six_ALL_CCFRWORK=/gpfswork/rech/six/commun
 eval "$(/gpfswork/rech/six/commun/conda/bin/conda shell.bash hook)"
-cd /home/ec2-user/
+cd /home/guillaume_huggingface_co/
 echo ". /gpfswork/rech/six/commun/conda/etc/profile.d/conda.sh" >> ~/.bashrc
 echo "export six_ALL_CCFRWORK=/gpfswork/rech/six/commun" >> ~/.bashrc
 echo "export six_ALL_CCFRSCRATCH=/scratch" >> ~/.bashrc
