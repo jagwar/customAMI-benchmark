@@ -16,7 +16,7 @@ export FI_PROVIDER=efa
 export FI_EFA_USE_DEVICE_RDMA=1
 export RDMAV_FORK_SAFE=1
 export NCCL_PROTO=simple
-export LD_LIBRARY_PATH=/apps/lipovsek/nccl-pr691/lib/:/apps/lipovsek/aws-ofi-nccl-pr691/lib/:$LD_LIBRARY_PATH:/apps/lipovsek/nccl-pr691/lib/:/apps/lipovsek/aws-ofi-nccl-pr691/lib/
+export LD_LIBRARY_PATH=/apps/ncc-pr691/nccl/build/lib/:/apps/ncc-pr691/aws-ofi-nccl/lib/:$LD_LIBRARY_PATH:/apps/ncc-pr691/nccl/build/lib/:/apps/ncc-pr691/aws-ofi-nccl/lib/
 
 
 
