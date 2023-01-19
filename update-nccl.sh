@@ -17,16 +17,3 @@ export FI_EFA_USE_DEVICE_RDMA=1
 export RDMAV_FORK_SAFE=1
 export NCCL_PROTO=simple
 export LD_LIBRARY_PATH=/apps/ncc-pr691/nccl/build/lib/:/apps/ncc-pr691/aws-ofi-nccl/lib/:$LD_LIBRARY_PATH:/apps/ncc-pr691/nccl/build/lib/:/apps/ncc-pr691/aws-ofi-nccl/lib/
-
-
-
-
-Then compile this one: https://github.com/aws/aws-ofi-nccl
-./configure --prefix=/apps/lipovsek/aws-ofi-nccl-pr691 --with-mpi=/opt/amazon/openmpi --with-libfabric=/opt/amazon/efa --with-nccl=/apps/lipovsek/nccl-pr691 --with-cuda=/usr/local/cuda-11.6
-
-export LD_PRELOAD=/apps/lipovsek/nccl-pr691/lib/libnccl.so:/apps/lipovsek/aws-ofi-nccl-pr691/lib/libnccl-net.so
-export FI_PROVIDER=efa
-export FI_EFA_USE_DEVICE_RDMA=1
-export RDMAV_FORK_SAFE=1
-export NCCL_PROTO=simple
-export LD_LIBRARY_PATH=/apps/lipovsek/nccl-pr691/lib/:/apps/lipovsek/aws-ofi-nccl-pr691/lib/:$LD_LIBRARY_PATH:/apps/lipovsek/nccl-pr691/lib/:/apps/lipovsek/aws-ofi-nccl-pr691/lib/
