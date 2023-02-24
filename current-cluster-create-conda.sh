@@ -2,7 +2,7 @@ export six_ALL_CCFRWORK=/fsx/guillaume/gpfswork/rech/six/commun/
 eval "$(/gpfswork/rech/six/commun/conda/bin/conda shell.bash hook)"
 cd /home/ec2-user/
 #echo ". /gpfswork/rech/six/commun/conda/etc/profile.d/conda.sh" >> ~/.bashrc
-echo "export six_ALL_CCFRWORK=/fsx/guillaume/gpfswork/rech/six/commun/\" >> ~/.bashrc
+echo "export six_ALL_CCFRWORK=/fsx/guillaume/gpfswork/rech/six/commun/" >> ~/.bashrc
 echo "export six_ALL_CCFRSCRATCH=/scratch" >> ~/.bashrc
 #echo ". /gpfswork/rech/six/commun/conda/etc/profile.d/conda.sh" >> ~/.bashrc
 export CONDA_ENVS_PATH=/admin/home/guillaume/conda
