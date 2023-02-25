@@ -17,6 +17,7 @@ cd tokenizers
 git checkout bigscience_fork
 cd bindings/python
 pip install setuptools_rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 pip install -e .
 pip install git+https://github.com/microsoft/DeepSpeed@2a64448830375528009d2d8c81e8a40d7e09396d
 git clone https://github.com/bigscience-workshop/Megatron-DeepSpeed $six_ALL_CCFRWORK/code/tr11-176B-ml/Megatron-DeepSpeed
